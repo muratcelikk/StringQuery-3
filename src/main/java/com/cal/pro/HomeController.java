@@ -18,7 +18,7 @@ public class HomeController {
 		return "home";
 	}
 
-	public ArrayList<String> dataResult() { // dönen deðerinin türü dataResult metodunun türü olur.(önemli)
+	public ArrayList<String> dataResult() { // dönen değerinin türü dataResult metodunun türü olur.(önemli)
 
 		ArrayList<String> ls = new ArrayList<String>();
 		ls.add("Künefe");
