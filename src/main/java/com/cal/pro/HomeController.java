@@ -18,12 +18,12 @@ public class HomeController {
 		return "home";
 	}
 
-	public ArrayList<String> dataResult() { // dönen değerinin türü dataResult metodunun türü olur.(önemli)
+	public ArrayList<String> dataResult() { // dÃ¶nen deÃ°erinin tÃ¼rÃ¼ dataResult metodunun tÃ¼rÃ¼ olur.(Ã¶nemli)
 
 		ArrayList<String> ls = new ArrayList<String>();
-		ls.add("Künefe");
+		ls.add("KÃ¼nefe");
 		ls.add("Kadayif");
-		ls.add("Sütlü Nüriye");
+		ls.add("SÃ¼tlÃ¼ NÃ¼riye");
 		ls.add("Vezir Parmagi");
 
 		return ls;
@@ -32,14 +32,14 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String fncHomePost(Model model, @RequestParam String mail, @RequestParam String password) {
 		if (mail.equals("")) {
-			model.addAttribute("fail", "Lütfen mail adresi giriniz! ");
+			model.addAttribute("fail", "LÃ¼tfen mail adresi giriniz! ");
 		} else if (password.equals("")) {
-			model.addAttribute("fail", "Lütfen şifrenizi giriniz!  ");
+			model.addAttribute("fail", "LÃ¼tfen Åifrenizi giriniz!  ");
 		} else {
 			if (mail.equals("murat@gmail.com") && password.equals("12345")) {
 				return "redirect:/detail/murat@gmail.com";
 			} else {
-				model.addAttribute("fail", "Kullanıcı adı yada şifre hatalı!! ");
+				model.addAttribute("fail", "KullanÄ±cÄ± adÄ± yada Åifre hatalÄ±!! ");
 			}
 		}
 		return "home";
